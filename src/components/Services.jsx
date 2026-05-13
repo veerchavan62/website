@@ -51,24 +51,24 @@ const colorVariants = {
 
 export default function Services() {
   return (
-    <section id="services" className="bg-white py-24 md:py-32">
+    <section id="services" className="bg-white py-28 md:py-36">
       <div className="section-container">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-20">
           <p className="text-xs font-medium tracking-widest text-blue-600 uppercase mb-4">
             What We Offer
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-neutral-900 tracking-tight">
+          <h2 className="text-4xl md:text-4xl font-semibold text-neutral-900 tracking-tight leading-snug">
             Complete Workspace Solutions
           </h2>
-          <p className="mt-4 text-neutral-500 leading-relaxed">
+          <p className="mt-5 text-base text-neutral-500 leading-relaxed">
             From furniture procurement to full-scale infrastructure deployment, 
             we deliver comprehensive solutions for modern enterprises.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
@@ -76,12 +76,12 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group p-8 rounded-2xl border border-neutral-100 bg-white hover:border-neutral-200 hover:shadow-lg transition-all duration-300"
+              className="group p-7 rounded-xl border border-neutral-100 bg-white hover:border-neutral-200 hover:shadow-lg transition-all duration-300"
             >
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-colors ${colorVariants[service.color]}`}>
-                <service.icon className="w-6 h-6" />
+              <div className={`w-11 h-11 rounded-lg flex items-center justify-center mb-4 transition-colors ${colorVariants[service.color]}`}>
+                <service.icon className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">
+              <h3 className="text-base font-semibold text-neutral-900 mb-2">
                 {service.title}
               </h3>
               <p className="text-sm text-neutral-500 leading-relaxed">

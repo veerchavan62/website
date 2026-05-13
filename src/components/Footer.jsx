@@ -29,8 +29,8 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-neutral-400">
-      <div className="section-container py-16 md:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 lg:gap-16">
+      <div className="section-container py-20 md:py-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:gap-20">
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-2">
             <div className="flex items-center gap-3 mb-5">
@@ -85,7 +85,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-neutral-800">
-        <div className="section-container py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+        <div className="section-container py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
           <p>&copy; {new Date().getFullYear()} SR Abhiyantra System Pvt Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

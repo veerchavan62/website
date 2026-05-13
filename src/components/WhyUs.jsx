@@ -42,24 +42,24 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="bg-neutral-50 py-24 md:py-32">
+    <section id="why-us" className="bg-neutral-50 py-28 md:py-36">
       <div className="section-container">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-20">
           <p className="text-xs font-medium tracking-widest text-blue-600 uppercase mb-4">
             Why Choose Us
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-neutral-900 tracking-tight">
+          <h2 className="text-4xl md:text-4xl font-semibold text-neutral-900 tracking-tight leading-snug">
             Built on Trust, Engineered for Scale
           </h2>
-          <p className="mt-4 text-neutral-500 leading-relaxed">
+          <p className="mt-5 text-base text-neutral-500 leading-relaxed">
             SR Abhiyantra serves as a strategic infrastructure partner for enterprises, 
             combining rigorous execution with top-tier asset procurement.
           </p>
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-7">
           {reasons.map((item, i) => (
             <motion.div
               key={item.title}
@@ -67,12 +67,12 @@ export default function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`group ${item.span} p-8 rounded-2xl bg-white border border-neutral-100 hover:border-neutral-200 hover:shadow-lg transition-all duration-300`}
+              className={`group ${item.span} p-7 rounded-xl bg-white border border-neutral-100 hover:border-neutral-200 hover:shadow-lg transition-all duration-300`}
             >
-              <div className="w-11 h-11 rounded-xl bg-neutral-100 text-neutral-600 flex items-center justify-center mb-5 group-hover:bg-neutral-900 group-hover:text-white transition-colors duration-300">
+              <div className="w-10 h-10 rounded-lg bg-neutral-100 text-neutral-600 flex items-center justify-center mb-4 group-hover:bg-neutral-900 group-hover:text-white transition-colors duration-300">
                 <item.icon className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">
+              <h3 className="text-base font-semibold text-neutral-900 mb-2">
                 {item.title}
               </h3>
               <p className="text-sm text-neutral-500 leading-relaxed">

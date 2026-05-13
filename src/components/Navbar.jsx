@@ -33,8 +33,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'glass border-b border-neutral-200/50 shadow-sm py-3'
-          : 'bg-transparent py-5'
+          ? 'glass border-b border-neutral-200/50 shadow-sm py-2.5'
+          : 'bg-transparent py-4'
       }`}
     >
       <div className="section-container flex items-center justify-between">
@@ -60,12 +60,12 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5">
           {navLinks.map(link => (
             <a
               key={link.label}
               href={link.href}
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+              className={`px-3.5 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
                 scrolled 
                   ? 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100'
                   : 'text-white/80 hover:text-white hover:bg-white/10'
@@ -80,7 +80,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3 relative z-50">
           <a
             href="#contact"
-            className={`hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            className={`hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
               scrolled
                 ? 'bg-neutral-900 text-white hover:bg-neutral-800'
                 : 'bg-white text-neutral-900 hover:bg-neutral-100'
