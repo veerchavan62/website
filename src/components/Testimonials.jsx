@@ -37,27 +37,30 @@ const doubled = [...testimonials, ...testimonials];
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative bg-neutral-950 py-40 md:py-48 overflow-hidden border-t border-white/5">
+    <section id="testimonials" className="relative bg-neutral-950 py-32 md:py-40 overflow-hidden">
       {/* Premium background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(59,130,246,0.08),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(59,130,246,0.12),transparent)]" />
+        <div className="grid-pattern opacity-40" />
+        <div className="noise-overlay" />
       </div>
       
       {/* Ambient glows */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[400px] bg-blue-500/4 rounded-full blur-[140px]" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-neutral-800/5 rounded-full blur-[120px]" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-neutral-500/5 rounded-full blur-[120px]" />
       
       <div className="section-container relative">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-24">
-          <p className="text-xs font-medium tracking-[0.15em] text-neutral-400 uppercase mb-6">
-            Client Testimonials
+        <div className="text-center max-w-2xl mx-auto mb-20">
+          <p className="text-[11px] font-semibold tracking-[0.2em] text-blue-400 uppercase mb-5">
+            Client Feedback
           </p>
-          <h2 className="text-5xl md:text-6xl font-light text-white tracking-[-0.02em] leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl font-semibold text-white tracking-[-0.02em] leading-[1.15]">
             Trusted by Industry Leaders
           </h2>
-          <p className="mt-8 text-base text-neutral-400 leading-relaxed max-w-2xl mx-auto">
-            Hear from enterprise clients about their experience with our world-class workspace solutions.
+          <p className="mt-6 text-lg text-neutral-400 leading-relaxed">
+            Hear what our corporate partners have to say about our workspace solutions 
+            and delivery excellence.
           </p>
         </div>
       </div>

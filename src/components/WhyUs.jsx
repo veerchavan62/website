@@ -44,56 +44,58 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="relative bg-neutral-950 py-40 md:py-48 overflow-hidden border-t border-white/5">
-      {/* Premium gradient layers */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-1/3 w-[600px] h-[400px] bg-blue-500/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-neutral-800/10 rounded-full blur-[100px]" />
-      </div>
+    <section id="why-us" className="relative bg-white py-32 md:py-40 overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 grid-pattern-light opacity-30" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-neutral-100/50 rounded-full blur-[150px]" />
+      
+      {/* Section divider */}
+      <div className="absolute top-0 left-0 right-0 section-divider" />
       
       <div className="section-container relative">
         {/* Header */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto mb-24"
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-2xl mx-auto mb-20"
         >
-          <p className="text-xs font-medium tracking-[0.15em] text-neutral-400 uppercase mb-6">
-            Why Work With Us
+          <p className="text-[11px] font-semibold tracking-[0.2em] text-blue-600 uppercase mb-5">
+            Why Choose Us
           </p>
-          <h2 className="text-5xl md:text-6xl font-light text-white tracking-[-0.02em] leading-[1.1]">
-            Built on Trust. Engineered for Scale.
+          <h2 className="text-4xl md:text-5xl font-semibold text-neutral-900 tracking-[-0.02em] leading-[1.15]">
+            Built on Trust, Engineered for Scale
           </h2>
-          <p className="mt-8 text-base text-neutral-400 leading-relaxed max-w-2xl mx-auto">
-            Strategic infrastructure partnership combining precision execution with direct OEM access to enterprise-grade assets.
+          <p className="mt-6 text-lg text-neutral-500 leading-relaxed">
+            SR Abhiyantra serves as a strategic infrastructure partner for enterprises, 
+            combining rigorous execution with top-tier asset procurement.
           </p>
         </motion.div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {reasons.map((item, i) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              className={`group ${item.span} relative p-8 rounded-xl border border-white/8 bg-gradient-to-br from-white/5 to-transparent hover:from-white/10 hover:to-white/5 backdrop-blur-sm transition-all duration-500 hover:border-white/15`}
+              transition={{ delay: i * 0.08, duration: 0.5 }}
+              className={`group ${item.span} relative p-8 rounded-2xl border border-neutral-100 bg-gradient-to-br from-white to-neutral-50/50 hover:border-neutral-200 transition-all duration-500 hover:shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)]`}
             >
               {/* Featured indicator */}
               {item.featured && (
-                <div className="absolute top-6 right-6 w-2.5 h-2.5 rounded-full bg-blue-400 shadow-lg shadow-blue-500/50" />
+                <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-blue-500" />
               )}
               
-              <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-600/10 text-blue-400 flex items-center justify-center mb-6 group-hover:from-blue-500/30 group-hover:to-blue-600/20 group-hover:text-blue-300 transition-all duration-300">
-                <item.icon className="w-6 h-6" />
+              <div className="w-12 h-12 rounded-xl bg-neutral-900 text-white flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
+                <item.icon className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-medium text-white mb-3 tracking-tight">
+              <h3 className="text-lg font-semibold text-neutral-900 mb-3 tracking-tight">
                 {item.title}
               </h3>
-              <p className="text-sm text-neutral-400 leading-relaxed">
+              <p className="text-sm text-neutral-500 leading-relaxed">
                 {item.description}
               </p>
             </motion.div>

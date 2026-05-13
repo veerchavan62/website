@@ -38,8 +38,8 @@ export default function Footer() {
       {/* Section divider */}
       <div className="absolute top-0 left-0 right-0 section-divider-dark" />
       
-      <div className="section-container relative py-32 md:py-40">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16 lg:gap-24">
+      <div className="section-container relative py-24 md:py-32">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:gap-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-2">
             <div className="flex items-center gap-4 mb-6">

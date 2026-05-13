@@ -1,30 +1,35 @@
 @import "tailwindcss";
 
-/* ── Premium World-Class Design Tokens ──────────────── */
+/* ── Premium Design Tokens ─────────────────────────── */
 :root {
-  /* Dark Navy/Black Base - Ultra Premium */
-  --primary-950: #05080f;
-  --primary-900: #0a0f1a;
-  --primary-800: #0f1420;
-  --primary-700: #1a2332;
+  /* Primary - Sophisticated Navy/Charcoal */
+  --primary-950: #0a0f1a;
+  --primary-900: #111827;
+  --primary-800: #1f2937;
+  --primary-700: #374151;
+  --primary-600: #4b5563;
   
-  /* Neutrals - Refined & Sophisticated */
-  --neutral-950: #0a0a0a;
-  --neutral-900: #151515;
-  --neutral-800: #1f1f1f;
-  --neutral-700: #2a2a2a;
-  --neutral-600: #404040;
-  --neutral-500: #737373;
-  --neutral-400: #a3a3a3;
-  --neutral-300: #d4d4d4;
-  --neutral-200: #e5e5e5;
-  --neutral-100: #f5f5f5;
+  /* Neutrals - Refined */
   --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  --neutral-950: #0a0a0a;
   
-  /* Accent - Subtle Electric Blue */
-  --accent-500: #3b82f6;
-  --accent-400: #60a5fa;
+  /* Accent - Elegant Blue */
+  --accent-50: #eff6ff;
+  --accent-100: #dbeafe;
+  --accent-200: #bfdbfe;
   --accent-300: #93c5fd;
+  --accent-400: #60a5fa;
+  --accent-500: #3b82f6;
+  --accent-600: #2563eb;
   
   /* White */
   --white: #ffffff;
@@ -161,64 +166,11 @@ a {
   animation-play-state: paused;
 }
 
-/* ── Premium Utility Classes ───────────────────────── */
+/* ── Utility ───────────────────────────────────────── */
 .section-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-}
-
-@media (min-width: 768px) {
-  .section-container {
-    padding: 0 48px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .section-container {
-    padding: 0 80px;
-  }
-}
-
-/* Glass Morphism Effect */
-.glass-effect {
-  background: rgba(15, 20, 32, 0.4);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Premium Shadow */
-.premium-shadow {
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-}
-
-.premium-shadow-sm {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Gradient Text */
-.gradient-text {
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Grid Pattern Background */
-.grid-pattern {
-  background-image: 
-    linear-gradient(0deg, transparent 24%, rgba(59, 130, 246, 0.05) 25%, rgba(59, 130, 246, 0.05) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, 0.05) 75%, rgba(59, 130, 246, 0.05) 76%, transparent 77%, transparent),
-    linear-gradient(90deg, transparent 24%, rgba(59, 130, 246, 0.05) 25%, rgba(59, 130, 246, 0.05) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, 0.05) 75%, rgba(59, 130, 246, 0.05) 76%, transparent 77%, transparent);
-  background-size: 50px 50px;
-}
-
-/* Noise Overlay */
-.noise-overlay {
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise' /%3E%3C/filter%3E%3Crect width='400' height='400' fill='white' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
-  opacity: 0.3;
-  pointer-events: none;
 }
 
 @media (min-width: 768px) {

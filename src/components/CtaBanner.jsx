@@ -18,28 +18,28 @@ export default function CtaBanner() {
 
       <div className="section-container relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-[-0.02em] leading-[1.1]">
-            Transform Your Workspace into a
-            <br />
-            <span className="gradient-text font-medium">Premium Infrastructure</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white tracking-[-0.02em] leading-[1.1]">
+            Ready to Upgrade Your{' '}
+            <span className="gradient-text">Workspace Infrastructure</span>?
           </h2>
-          <p className="mt-10 text-base md:text-lg text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-            Get expert guidance on optimizing your corporate environment. Our consultants deliver world-class solutions aligned with your enterprise goals.
+          <p className="mt-8 text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+            Get a free consultation and detailed quotation for your corporate office requirements. 
+            Let&apos;s build something great together.
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-5">
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 px-8 py-3 bg-white text-neutral-900 rounded-lg text-sm font-medium hover:bg-neutral-50 transition-all duration-300 premium-shadow"
+              className="group inline-flex items-center gap-2.5 px-8 py-4 bg-white text-neutral-900 rounded-full text-sm font-semibold hover:bg-neutral-100 transition-all duration-300 shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_4px_32px_rgba(0,0,0,0.3)]"
             >
-              Start Your Project
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              Get Free Quote
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
               href="https://wa.me/919325837755?text=Hello%20SR%20Abhiyantra%20Team%2C%20I%20would%20like%20to%20inquire%20about%20your%20workspace%20solutions%20and%20dealership%20services."

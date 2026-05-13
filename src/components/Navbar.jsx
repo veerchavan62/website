@@ -33,11 +33,11 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'glass-effect shadow-[0_8px_32px_rgba(0,0,0,0.12)] py-3 mt-4 mx-4 rounded-2xl max-w-fit left-1/2 -translate-x-1/2'
-          : 'bg-transparent py-6'
+          ? 'bg-white/80 backdrop-blur-xl border-b border-neutral-200/50 shadow-[0_1px_3px_rgba(0,0,0,0.05)] py-3'
+          : 'bg-transparent py-5'
       }`}
     >
-      <div className={`${scrolled ? 'px-8' : 'section-container'} flex items-center justify-between`}>
+      <div className="section-container flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3.5 group relative z-50">
           <img
@@ -60,21 +60,18 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-1">
           {navLinks.map(link => (
             <a
               key={link.label}
               href={link.href}
-              className={`text-sm font-medium transition-colors relative group duration-300 ${
+              className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
                 scrolled 
-                  ? 'text-neutral-400 hover:text-white'
-                  : 'text-white/70 hover:text-white'
+                  ? 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100'
+                  : 'text-white/70 hover:text-white hover:bg-white/10'
               }`}
             >
               {link.label}
-              <span className={`absolute bottom-0 left-0 h-px w-0 transition-all duration-300 group-hover:w-full ${
-                scrolled ? 'bg-white/40' : 'bg-white/60'
-              }`} />
             </a>
           ))}
         </nav>
