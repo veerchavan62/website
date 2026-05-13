@@ -31,44 +31,44 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'glass border-b border-neutral-200/50 shadow-sm py-2.5'
-          : 'bg-transparent py-4'
+          ? 'bg-white/80 backdrop-blur-xl border-b border-neutral-200/50 shadow-[0_1px_3px_rgba(0,0,0,0.05)] py-3'
+          : 'bg-transparent py-5'
       }`}
     >
       <div className="section-container flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group relative z-50">
+        <a href="#" className="flex items-center gap-3.5 group relative z-50">
           <img
             src="/logo-srabhiyantra.png"
             alt="SR Abhiyantra Systems Pvt Ltd"
-            className="h-12 w-12 md:h-14 md:w-14 rounded-xl object-contain bg-white p-1.5 shadow-sm transition-transform duration-300 group-hover:scale-105"
+            className="h-11 w-11 md:h-12 md:w-12 rounded-xl object-contain bg-white p-1.5 shadow-sm ring-1 ring-black/5 transition-transform duration-300 group-hover:scale-105"
           />
           <div className="hidden sm:block">
-            <p className={`font-semibold text-lg tracking-tight transition-colors ${
+            <p className={`font-semibold text-base tracking-tight transition-colors ${
               scrolled ? 'text-neutral-900' : 'text-white'
             }`}>
               SR Abhiyantra
             </p>
-            <p className={`text-[10px] tracking-wide font-medium transition-colors ${
-              scrolled ? 'text-neutral-500' : 'text-white/70'
+            <p className={`text-[10px] tracking-wider font-medium uppercase transition-colors ${
+              scrolled ? 'text-neutral-400' : 'text-white/60'
             }`}>
-              Govt. Licensed Electrical Contractor
+              Govt. Licensed Contractor
             </p>
           </div>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-0.5">
+        <nav className="hidden lg:flex items-center gap-1">
           {navLinks.map(link => (
             <a
               key={link.label}
               href={link.href}
-              className={`px-3.5 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+              className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
                 scrolled 
                   ? 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100'
-                  : 'text-white/80 hover:text-white hover:bg-white/10'
+                  : 'text-white/70 hover:text-white hover:bg-white/10'
               }`}
             >
               {link.label}
@@ -77,13 +77,13 @@ export default function Navbar() {
         </nav>
 
         {/* CTA + Mobile Toggle */}
-        <div className="flex items-center gap-3 relative z-50">
+        <div className="flex items-center gap-4 relative z-50">
           <a
             href="#contact"
-            className={`hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
+            className={`hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               scrolled
-                ? 'bg-neutral-900 text-white hover:bg-neutral-800'
-                : 'bg-white text-neutral-900 hover:bg-neutral-100'
+                ? 'bg-neutral-900 text-white hover:bg-neutral-800 shadow-sm'
+                : 'bg-white text-neutral-900 hover:bg-neutral-100 shadow-lg shadow-black/10'
             }`}
           >
             Get Free Quote
@@ -91,7 +91,7 @@ export default function Navbar() {
           </a>
 
           <button
-            className={`lg:hidden p-2 rounded-lg transition-colors ${
+            className={`lg:hidden p-2.5 rounded-full transition-colors ${
               scrolled 
                 ? 'text-neutral-700 hover:bg-neutral-100' 
                 : 'text-white hover:bg-white/10'
@@ -99,7 +99,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation menu"
           >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -108,22 +108,22 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="lg:hidden fixed inset-0 top-0 z-40 bg-white"
           >
-            <div className="flex flex-col items-center justify-center min-h-screen px-6 pt-20">
-              <nav className="flex flex-col items-center gap-2 w-full max-w-sm">
+            <div className="flex flex-col items-center justify-center min-h-screen px-8 pt-24">
+              <nav className="flex flex-col items-center gap-1 w-full max-w-sm">
                 {navLinks.map((link, i) => (
                   <motion.a
                     key={link.label}
                     href={link.href}
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.05 }}
-                    className="w-full text-center py-4 text-xl font-medium text-neutral-800 hover:text-neutral-600 rounded-xl hover:bg-neutral-50 transition-colors"
+                    transition={{ delay: i * 0.06, duration: 0.4 }}
+                    className="w-full text-center py-4 text-xl font-medium text-neutral-800 hover:text-neutral-600 rounded-2xl hover:bg-neutral-50 transition-all duration-200"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
@@ -131,10 +131,10 @@ export default function Navbar() {
                 ))}
                 <motion.a
                   href="#contact"
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: navLinks.length * 0.05 }}
-                  className="w-full mt-6 flex items-center justify-center gap-2 py-4 bg-neutral-900 text-white text-lg font-semibold rounded-xl hover:bg-neutral-800 transition-colors"
+                  transition={{ delay: navLinks.length * 0.06, duration: 0.4 }}
+                  className="w-full mt-8 flex items-center justify-center gap-2 py-4 bg-neutral-900 text-white text-base font-semibold rounded-2xl hover:bg-neutral-800 transition-colors shadow-lg"
                   onClick={() => setMobileOpen(false)}
                 >
                   Get Free Quote

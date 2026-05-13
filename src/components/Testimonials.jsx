@@ -37,17 +37,28 @@ const doubled = [...testimonials, ...testimonials];
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="bg-neutral-900 py-28 md:py-36 overflow-hidden">
-      <div className="section-container">
+    <section id="testimonials" className="relative bg-neutral-950 py-32 md:py-40 overflow-hidden">
+      {/* Premium background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(59,130,246,0.12),transparent)]" />
+        <div className="grid-pattern opacity-40" />
+        <div className="noise-overlay" />
+      </div>
+      
+      {/* Ambient glows */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-neutral-500/5 rounded-full blur-[120px]" />
+      
+      <div className="section-container relative">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <p className="text-xs font-medium tracking-widest text-blue-400 uppercase mb-4">
+          <p className="text-[11px] font-semibold tracking-[0.2em] text-blue-400 uppercase mb-5">
             Client Feedback
           </p>
-          <h2 className="text-4xl md:text-4xl font-semibold text-white tracking-tight leading-snug">
+          <h2 className="text-4xl md:text-5xl font-semibold text-white tracking-[-0.02em] leading-[1.15]">
             Trusted by Industry Leaders
           </h2>
-          <p className="mt-5 text-base text-neutral-400 leading-relaxed">
+          <p className="mt-6 text-lg text-neutral-400 leading-relaxed">
             Hear what our corporate partners have to say about our workspace solutions 
             and delivery excellence.
           </p>
@@ -56,36 +67,36 @@ export default function Testimonials() {
 
       {/* Marquee */}
       <div className="relative">
-        {/* Edge fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 md:w-48 bg-gradient-to-r from-neutral-900 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 md:w-48 bg-gradient-to-l from-neutral-900 to-transparent" />
+        {/* Premium edge fades */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 md:w-64 bg-gradient-to-r from-neutral-950 via-neutral-950/80 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 md:w-64 bg-gradient-to-l from-neutral-950 via-neutral-950/80 to-transparent" />
 
-        <div className="marquee-track flex items-stretch gap-7">
+        <div className="marquee-track flex items-stretch gap-6">
           {doubled.map((t, i) => (
             <div
               key={`${t.name}-${i}`}
-              className="flex-shrink-0 w-[360px] md:w-[420px] p-7 rounded-xl bg-neutral-800/50 border border-neutral-700/50 backdrop-blur-sm"
+              className="flex-shrink-0 w-[380px] md:w-[440px] premium-card-dark rounded-2xl p-8"
             >
               {/* Stars */}
-              <div className="flex gap-1 mb-5">
+              <div className="flex gap-1 mb-6">
                 {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                  <Star key={j} className="w-4 h-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
 
               {/* Quote */}
-              <p className="text-neutral-300 text-sm leading-relaxed mb-6 min-h-[80px]">
+              <p className="text-neutral-300 leading-relaxed mb-8 min-h-[96px]">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-5 border-t border-neutral-700/50">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-semibold text-sm">
+              <div className="flex items-center gap-4 pt-6 border-t border-neutral-800">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-semibold shadow-lg shadow-blue-500/20">
                   {t.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-medium text-white text-sm">{t.name}</p>
-                  <p className="text-xs text-neutral-500">{t.role}, {t.company}</p>
+                  <p className="font-medium text-white">{t.name}</p>
+                  <p className="text-sm text-neutral-500">{t.role}, {t.company}</p>
                 </div>
               </div>
             </div>
