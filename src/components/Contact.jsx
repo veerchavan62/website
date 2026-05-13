@@ -24,33 +24,29 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative bg-white py-32 md:py-40 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 grid-pattern-light opacity-30" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50/50 rounded-full blur-[150px]" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-neutral-100/50 rounded-full blur-[120px]" />
-      
-      {/* Section divider */}
-      <div className="absolute top-0 left-0 right-0 section-divider" />
+    <section id="contact" className="relative bg-neutral-950 py-40 md:py-48 overflow-hidden border-t border-white/5">
+      {/* Premium gradient */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-1/3 w-[600px] h-[400px] bg-blue-500/4 rounded-full blur-[120px]" />
+      </div>
       
       <div className="section-container relative">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="grid lg:grid-cols-2 gap-20 lg:gap-40">
           {/* Left - Info */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7 }}
           >
-            <p className="text-[11px] font-semibold tracking-[0.2em] text-blue-600 uppercase mb-5">
-              Get in Touch
+            <p className="text-xs font-medium tracking-[0.15em] text-neutral-400 uppercase mb-6">
+              Let&apos;s Talk
             </p>
-            <h2 className="text-4xl md:text-5xl font-semibold text-neutral-900 tracking-[-0.02em] leading-[1.15]">
-              Let&apos;s Build Your Workspace
+            <h2 className="text-5xl md:text-6xl font-light text-white tracking-[-0.02em] leading-[1.1]">
+              Build Your Premium Workspace
             </h2>
-            <p className="mt-6 text-lg text-neutral-500 leading-relaxed max-w-md">
-              Tell us about your requirements. Our corporate team is available to provide 
-              a comprehensive quotation and consultation.
+            <p className="mt-8 text-base text-neutral-400 leading-relaxed max-w-lg">
+              Share your workspace requirements and our infrastructure specialists will craft a comprehensive solution tailored to your enterprise.
             </p>
 
             <div className="mt-12 space-y-6">

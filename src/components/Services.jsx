@@ -54,55 +54,55 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative bg-neutral-50 py-32 md:py-40 overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 grid-pattern-light opacity-50" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/30 rounded-full blur-[150px] -translate-y-1/2" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-neutral-200/50 rounded-full blur-[120px] translate-y-1/2" />
+    <section id="services" className="relative bg-neutral-950 py-40 md:py-48 overflow-hidden border-t border-white/5">
+      {/* Premium gradient background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[140px] -translate-y-1/2" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-neutral-800/5 rounded-full blur-[100px]" />
+      </div>
       
       <div className="section-container relative">
         {/* Header */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-20"
+          transition={{ duration: 0.7 }}
+          className="text-center max-w-3xl mx-auto mb-24"
         >
-          <p className="text-[11px] font-semibold tracking-[0.2em] text-blue-600 uppercase mb-5">
-            What We Offer
+          <p className="text-xs font-medium tracking-[0.15em] text-neutral-400 uppercase mb-6">
+            Our Capabilities
           </p>
-          <h2 className="text-4xl md:text-5xl font-semibold text-neutral-900 tracking-[-0.02em] leading-[1.15]">
-            Complete Workspace Solutions
+          <h2 className="text-5xl md:text-6xl font-light text-white tracking-[-0.02em] leading-[1.1]">
+            Comprehensive Enterprise Solutions
           </h2>
-          <p className="mt-6 text-lg text-neutral-500 leading-relaxed">
-            From furniture procurement to full-scale infrastructure deployment, 
-            we deliver comprehensive solutions for modern enterprises.
+          <p className="mt-8 text-base text-neutral-400 leading-relaxed max-w-2xl mx-auto">
+            From strategic infrastructure planning to complete implementation. We deliver world-class workspace solutions tailored to your enterprise needs.
           </p>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.5 }}
-              className={`group relative p-8 rounded-2xl bg-white border border-neutral-100 ${service.border} transition-all duration-500 hover:shadow-[0_8px_40px_-12px_rgba(0,0,0,0.1)]`}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className="group relative p-8 rounded-xl border border-white/8 bg-gradient-to-br from-white/5 to-transparent hover:from-white/10 hover:to-white/5 backdrop-blur-sm transition-all duration-500 hover:border-white/15"
             >
-              {/* Gradient overlay on hover */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+              {/* Premium glow on hover */}
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-blue-500/5 to-transparent" />
               
               <div className="relative">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.iconBg} flex items-center justify-center mb-6 shadow-lg`}>
-                  <service.icon className="w-5 h-5 text-white" />
+                <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${service.iconBg} flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-current/20 transition-all duration-300`}>
+                  <service.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-neutral-900 mb-3 tracking-tight">
+                <h3 className="text-lg font-medium text-white mb-3 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/80 transition-all duration-300">
                   {service.title}
                 </h3>
-                <p className="text-sm text-neutral-500 leading-relaxed">
+                <p className="text-sm text-neutral-400 leading-relaxed">
                   {service.description}
                 </p>
               </div>
